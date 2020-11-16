@@ -16,8 +16,7 @@
 # mysql -uroot -p
 
 MariaDB [(none)]> create database zabbix character set utf8 collate utf8_bin;
-MariaDB [(none)]> create user zabbix@localhost identified by 'motdepasse
-';
+MariaDB [(none)]> create user zabbix@localhost identified by 'motdepasse';
 MariaDB [(none)]> grant all privileges on zabbix.* to zabbix@localhost;
 MariaDB [(none)]> quit;
 ```
