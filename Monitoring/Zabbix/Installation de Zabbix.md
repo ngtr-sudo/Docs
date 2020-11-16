@@ -5,7 +5,9 @@ keywords:
 - "zabbix"
 - "installation"
 author: 
-- "Nicolas Gautier"
+- name: "Nicolas Gautier"
+  affiliation: "UFR SFA DEPT INFO"
+lang: "fr-FR"
 ...
 
 # Installation de Zabbix
