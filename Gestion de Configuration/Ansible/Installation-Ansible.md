@@ -2,17 +2,15 @@
 
 Pour installer Ansible 2.10 sur Debian il faut ajouter le dépôt de paquet au système :
 ```bash
-$ echo &quot;deb echo &quot;deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main&quot; \&gt;\&gt; append /etc/apt/sources.list
-
+$ echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> append /etc/apt/sources.list
+$ apt install gnupg2
 $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-
 $ apt update
-
 $ apt install ansible sudo
 ```
 On active l'accès en ssh par root :
 ```bash
-$ vim /etc/ssh/sshd\_config
+$ vim /etc/ssh/sshd_config
 
 PermitRootLogin yes
 ```
