@@ -1,4 +1,10 @@
 # Installation de Zabbix
+- [Installation de Zabbix](#installation-de-zabbix)
+  - [Installation CLI](#installation-cli)
+    - [Apache2 et PHP7.3](#apache2-et-php73)
+    - [MySQL (MariaDB)](#mysql-mariadb)
+    - [Configuration et systemd](#configuration-et-systemd)
+  - [Installation Web](#installation-web)
 
 ## Installation CLI
 

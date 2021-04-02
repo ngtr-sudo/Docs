@@ -1,0 +1,14 @@
+$TTL 1800 ; Temps d'expiration
+@ IN  SOA dns-dhcp.domaine.local. admin.domaine.local. (
+                         2021010201
+                         3600
+                         600
+                         86400
+                         1800 )
+ 
+@ IN  NS      dns-dhcp.domaine.local.
+ 
+dns-dhcp    IN  A       192.168.0.250
+client1     IN  A       192.168.0.1
+client2     IN  A       192.168.0.2
+client3     IN  A       192.168.0.3

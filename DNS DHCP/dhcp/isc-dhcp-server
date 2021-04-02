@@ -1,0 +1,3 @@
+INTERFACESv4 ="ens37" # On indique la carte réseau que le service DHCP va écouter
+
+INTERFACESv6 = ""
