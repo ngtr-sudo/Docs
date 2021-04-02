@@ -17,9 +17,7 @@ PermitRootLogin yes
 On génère des clés ssh et les partager aux hôtes ansible (ici 10.0.0.1 et 10.0.0.2):
 ```bash
 $ ssh-keygen
-
 $ ssh-copy-id root@10.0.0.1
-
 $ ssh-copy-id root@10.0.0.2
 ```
 On crée le fichier hosts pour ansible :
