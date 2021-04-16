@@ -38,8 +38,8 @@ DBPassword=motdepasse
 
 Redémarrer et activer le service zabbix:
 ```bash
-# systemctl restart zabbix-server zabbix-agent apache2
-# systemctl enable zabbix-server zabbix-agent apache2 
+systemctl restart zabbix-server zabbix-agent apache2
+systemctl enable zabbix-server zabbix-agent apache2 
 ```
 
 ## Installation Web
