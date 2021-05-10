@@ -30,11 +30,11 @@ Pour créer le domaine on se sert de l'utilitaire samba-tool qui va générer un
 ### Configuration de Bind9
 Les fichiers de configurations sont à mettre dans le répertoire `/etc/bind/`
 
-[On inclue le fichier named.conf généré par samba](Conf/named.conf.local)
+[On inclue le fichier named.conf généré par samba dans le fichier named.conf.local](Conf/named.conf.local)
 
-[Ajout des options nécéssaires au fonctionnement de l'AD dans la configuration de Bind9](Conf/named.conf.options)
+[Ajout des options dans named.conf.options nécéssaires au fonctionnement de l'AD dans la configuration de Bind9](Conf/named.conf.options)
 
-[Il faut aussi adapter le fichier généré par Samba en renseignant le nom de la zone et la version de Bind9](Conf/named.conf) 
+[Il faut aussi adapter le fichier généré named.conf par Samba en renseignant le nom de la zone et la version de Bind9](Conf/named.conf) 
 
 
 ### Modification du fichier resolvconf :
@@ -78,3 +78,14 @@ Pour avoir un serveur dhcp qui travaille en qui travaille en simultané avec le 
 8. On bloque les accès du fichier : `chmod 400 /var/lib/samba/dhcpduser.keytab`
 
 ### 3. [La configuration de DHCPD](Fichiers/DHCP/dhcpd.conf)
+
+## Config winbind Controleur de domaine
+Le contrôleur de domaine doit pouvoir voir les comptes du domaine, on met active winbind et la création de répertoire home dans pam et dans nsswitch :
+
+`pam-auth-update`
+
+nsswitch.conf :
+```properties
+passwd: files systemd winbind
+group:  files systemd winbind
+```
